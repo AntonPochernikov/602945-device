@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Антон Почерников](https://up.htmlacademy.ru/htmlcss/20/user/602945).
-* Наставник: `Неизвестно`.
+* Наставник: [Владислав Балабанович](https://htmlacademy.ru/profile/balabanovich).
 
 ---
 
