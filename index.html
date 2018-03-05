@@ -11,24 +11,28 @@
 
   			<!--Здесь будет форма "Поиск по сайту". -->
 
-  			<ul class="main-user-navigation">
-  				<li class="main-user-login"><a href="">Войти</a></li>
-  			</ul>
-  			<ul class="main-purchase-instruments">
-  				<li class="main-compare-item"><a href="">Сравнить</a></li>
-  				<li class="main-shopping-cart"><a href="">Корзина</a></li>
-  			</ul>
+  			<nav class="main-user-nav">
+  				<ul>
+  					<li class="main-user-nav-login"><a href="">Войти</a></li>
+  				</ul>
+  			</nav>
+  			<nav class="main-purchase-intruments">
+  				<ul>
+  					<li class="main-compare-item"><a href="">Сравнить</a></li>
+  					<li class="main-shopping-cart"><a href="">Корзина</a></li>
+  				</ul>
+  			</nav>
   			<nav class="main-navigation">
-  				<ul class="site-navigation">
+  				<ul class="main-site-nav">
   					<li class="main-nav-catalog">
-  						<a href="">Каталог товаров</a>
-  						<ul class="nav-catalog-menu">
-  							<li class="catalog-vr"><a href="">Виртуальная реальность</a></li>
-  							<li class="catalog-monopod"><a href="">Моноподы для селфи</a></li>
-  							<li class="catalog-action-cam"><a href="">Экшн-камеры</a></li>
-  							<li class="catalog-fitness-tracker"><a href="">Фитнес-браслеты</a></li>
-  							<li class="catalog-smartwatch"><a href="">Умные часы</a></li>
-  							<li class="catalog-quadrocopter"><a href="">Квадрокоптеры</a></li>
+  						<a href="">Каталог товаров<span class="main-nav-catalog-burger"></span></a>
+  						<ul class="main-nav-catalog-dropdown">
+  							<li class="main-nav-catalog-item"><a href="">Виртуальная реальность</a></li>
+  							<li class="main-nav-catalog-item"><a href="">Моноподы для селфи</a></li>
+  							<li class="main-nav-catalog-item"><a href="">Экшн-камеры</a></li>
+  							<li class="main-nav-catalog-item"><a href="">Фитнес-браслеты</a></li>
+  							<li class="main-nav-catalog-item"><a href="">Умные часы</a></li>
+  							<li class="main-nav-catalog-item"><a href="">Квадрокоптеры</a></li>
   						</ul>
   					</li>
   					<li class="main-nav-delivery"><a href="">Доставка</a></li>
@@ -41,67 +45,71 @@
   		<main class="main-container">
   			<section class="promo-slider">
   				<h2 class="visually-hidden">Промо товаров</h2>
-  				<ul class="promo-slider-switch-btns">
-  					<li class="first-promo-switch-btn"><span class="promo-slider-switch-button"></span></li>
-  					<li class="second-promo-switch-btn"><span class="promo-slider-switch-button"></span></li>
-  					<li class="third-promo-switch-btn"><span class="promo-slider-switch-button"></span></li>
-  				</ul>
-  				<ul class="promo-slider-preview">
-  					<li class="first-item-preview">
-  						<span class="item-preview-number">01</span>
-  						<img class="first-item-preview-image" src="http://placehold.it/150x100" alt="Самая длинная селфи-палка">
-  						<b class="item-preview-tagline">Делай селфи, как Бен Стиллер!</b>
-  						<p class="item-preview-descritption">Самая длинная палка для селфи доступна в нашем магазине.
-							Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-						<a class="item-preview-detail-tab" href="">Подробнее</a>
-						<ul class="item-preview-properties">
-							<li>
-								<p class="preview-property-value">8,5 м</p>
-								<p class="preview-property-description">Длина палки</p>
-							</li>
-							<li>
-								<p class="preview-property-value">5 кг</p>
-								<p class="preview-property-description">Вес палки</p>
-							</li>
-							<li>
-								<p class="preview-property-value">Карбон</p>
-								<p class="preview-property-description">Материал</p>
-							</li>
-						</ul>
-  					</li>
-  					<li class="second-item-preview">
-  						<span class="item-preview-number">02</span>
-  						<img class="second-item-preview-image" src="http://placehold.it/150x100" alt="Мотивирующий фитнес-браслет">
-  						<b class="item-preview-tagline">Худеем правильно</b>
-  						<p class="item-preview-descritption">Мотивирующие фитнес-браслеты помогут найти в себе силы 
-							не пропускать занятия и соблюдать диету.</p>
-						<a class="item-preview-detail-tab" href="">Подробнее</a>
-						<ul class="item-preview-properties">
-							<li>
-								<p class="preview-property-value">48 часов</p>
-								<p class="preview-property-description">Без подзарядки</p>
-							</li>
-						</ul>
-  					</li>
-  					<li class="third-item-preview">
-  						<span class="item-preview-number">03</span>
-  						<img class="third-item-preview-image" src="http://placehold.it/150x100" alt="Квадрокоптер нового поколения">
-  						<b class="item-preview-tagline">Порхает как бабочка, жалит как пчела!</b>
-  						<p class="item-preview-descritption">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным 
-  							лазером, замаскированным под стандартную камеру.</p>
-						<a class="item-preview-detail-tab" href="">Подробнее</a>
-						<ul class="item-preview-properties">
-							<li>
-								<p class="preview-property-value">800 м</p>
-								<p class="preview-property-description">Дальность полета</p>
-							</li>
-							<li>
-								<p class="preview-property-value">50 м</p>
-								<p class="preview-property-description">Радиус поражения</p>
-							</li>
-						</ul>
-  					</li>
-  				</ul>
+  				<nav class="promo-slider-nav">
+  					<ul class="promo-slider-control-list">
+  						<li><span class="promo-slider-control"></span></li>
+  						<li><span class="promo-slider-control"></span></li>
+  						<li><span class="promo-slider-control"></span></li>
+  					</ul>
+  				</nav>
+  				<div class="promo-slider-content">
+  					<ul class="promo-slider-content-list">
+  						<li class="promo-slider-item-content">
+  							<span class="promo-slider-item-number">01</span>
+  							<img class="promo-slider-item-image" src="http://placehold.it/150x100" alt="Самая длинная селфи-палка">
+  							<b class="promo-slider-item-tagline">Делай селфи, как Бен Стиллер!</b>
+  							<p class="promo-slider-item-desc">Самая длинная палка для селфи доступна в нашем магазине.
+								Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+							<a class="promo-slider-item-detail-tab" href="">Подробнее</a>
+							<ul class="promo-slider-item-properties">
+								<li>
+									<p class="item-property-value">8,5 м</p>
+									<p class="item-property-desc">Длина палки</p>
+								</li>
+								<li>
+									<p class="item-property-value">5 кг</p>
+									<p class="item-property-desc">Вес палки</p>
+								</li>
+								<li>
+									<p class="item-property-value">Карбон</p>
+									<p class="item-property-desc">Материал</p>
+								</li>
+							</ul>
+  						</li>
+  						<li class="promo-slider-item-content">
+  							<span class="promo-slider-item-number">02</span>
+  							<img class="promo-slider-item-image" src="http://placehold.it/150x100" alt="Мотивирующий фитнес-браслет">
+  							<b class="promo-slider-item-tagline">Худеем правильно</b>
+  							<p class="promo-slider-item-desc">Мотивирующие фитнес-браслеты помогут найти в себе силы 
+								не пропускать занятия и соблюдать диету.</p>
+							<a class="promo-slider-item-detail-tab" href="">Подробнее</a>
+							<ul class="promo-slider-item-properties">
+								<li>
+									<p class="item-property-value">48 часов</p>
+									<p class="item-property-desc">Без подзарядки</p>
+								</li>
+							</ul>
+  						</li>
+  						<li class="promo-slider-item-content">
+  							<span class="promo-slider-item-number">03</span>
+  							<img class="promo-slider-item-image" src="http://placehold.it/150x100" alt="Квадрокоптер нового поколения">
+  							<b class="promo-slider-item-tagline">Порхает как бабочка, жалит как пчела!</b>
+  							<p class="promo-slider-item-desc">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным 
+  								лазером, замаскированным под стандартную камеру.</p>
+							<a class="promo-slider-item-detail-tab" href="">Подробнее</a>
+							<ul class="promo-slider-item-properties">
+								<li>
+									<p class="item-property-value">800 м</p>
+									<p class="item-property-desc">Дальность полета</p>
+								</li>
+								<li>
+									<p class="item-property-value">50 м</p>
+									<p class="item-property-desc">Радиус поражения</p>
+								</li>
+							</ul>
+  						</li>
+  					</ul>
+  				</div>
   			</section>
 
   			<section class="item-list">
@@ -142,82 +150,100 @@
 
   			<section class="services">
   				<h2 class="visually-hidden">Услуги</h2>
-  				<ul class="service-list">
-  					<li class="service-delievery-tab"><a href="">Доставка</a></li>
-  					<li class="service-guarantee-tab"><a href="">Гарантия</a></li>
-  					<li class="service-credit-tab"><a href="">Кредит</a></li>
-  				</ul>
-  				<ul class="service-description">
-  					<li class="service-delievery">
-  						<h3>Доставка</h3>
-  						<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-  					</li>
-  					<li class="service-guarantee">
-  						<h3>Гарантия</h3>
-  						<p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-  					</li>
-  					<li class="service-credit">
-  						<h3>Гарантия</h3>
-  						<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-  					</li>
-  				</ul>
+  				<nav class="service-list-nav">
+  					<ul class="service-list">
+  						<li class="service-tab"><a href="">Доставка</a></li>
+  						<li class="service-tab"><a href="">Гарантия</a></li>
+  						<li class="service-tab"><a href="">Кредит</a></li>
+  					</ul>
+  				</nav>
+  				<div class="service-content">
+  					<ul class="service-content-list">
+  						<li class="service-delievery">
+  							<h3 class="service-title">Доставка</h3>
+  							<p class="service-desc">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+  						</li>
+  						<li class="service-guarantee">
+  							<h3 class="service-title">Гарантия</h3>
+  							<p class="service-desc">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+  						</li>
+  						<li class="service-credit">
+  							<h3 class="service-title">Гарантия</h3>
+  							<p class="service-desc">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+  						</li>
+  					</ul>
+  				</div>
   			</section>
 
   			<section class="trademark-logos">
   				<h2 class="visually-hidden">Марки производителей</h2>
-  				<ul class="trademark-logos-list">
-  					<li class="trademark-logo">
-  						<a href="">
-  							<img class="trademark-logo-img" src="http://placehold.it/150x100" alt="DJI">
-  						</a>
-  					</li>
-  					<li class="trademark-logo">
-  						<a href="">
-  							<img class="trademark-logo-img" src="http://placehold.it/150x100" alt="SP Gadgets">
-  						</a>
-  					</li>
-  					<li class="trademark-logo">
-  						<a href="">
-  							<img class="trademark-logo-img" src="http://placehold.it/150x100" alt="GoPro">
-  						</a>
-  					</li>
-  					<li class="trademark-logo">
-  						<a href="">
-  							<img class="trademark-logo-img" src="http://placehold.it/150x100" alt="VIVE">
-  						</a>
-  					</li>
-  				</ul>
+ 				<div class="trademark-logos-container">
+  					<ul class="trademark-logos-list">
+  						<li class="trademark-logo">
+  							<a href="">
+  								<img class="trademark-logo-img" src="http://placehold.it/150x100" alt="DJI">
+  							</a>
+  						</li>
+  						<li class="trademark-logo">
+  							<a href="">
+  								<img class="trademark-logo-img" src="http://placehold.it/150x100" alt="SP Gadgets">
+  							</a>
+  						</li>
+  						<li class="trademark-logo">
+  							<a href="">
+  								<img class="trademark-logo-img" src="http://placehold.it/150x100" alt="GoPro">
+  							</a>
+  						</li>
+  						<li class="trademark-logo">
+  							<a href="">
+  								<img class="trademark-logo-img" src="http://placehold.it/150x100" alt="VIVE">
+  							</a>
+  						</li>
+  					</ul>
+  				</div>
   			</section>
 
   			<section class="about-us">
-  				<h2>О нас</h2>
-  				<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-  				<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-  				<ul class="shipping-companys">
+  				<h2 class="about-us-title">О нас</h2>
+  				<div class="about-us-desc">
+  					<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+  					<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+  				</div>
+  				<ul class="shipping-companys-list">
   					<li>Деловые Линии</li>
   					<li>Автотрейдинг</li>
   					<li>ЖелДорЭкспедиция</li>
   				</ul>
-  				<a class="about-detail-tab" href="">Подробнее о нас</a>
+  				<div class="about-us-detail-tab">
+  					<a href="">Подробнее о нас</a>
+  				</div>
   			</section>
 
   			<section class="contacts">
-  				<h2>Контакты</h2>
-  				<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-  				<a href=""><img class="small-map" src="http://placehold.it/150x100" alt="Карта проезда"></a>
-  				<a class="write-us-tab" href="">Подробнее о нас</a>
+  				<h2 class="contacts-titile">Контакты</h2>
+  				<p class="contacts-desc">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+  				<div class="map-thumbnail">
+  					<a href=""><img src="http://placehold.it/150x100" alt="Карта проезда"></a>
+  				</div>
+  				<div class="write-us-tab">
+  					<a href="">Подробнее о нас</a>
+  				</div>
   			</section>
   		</main>
 
   		<footer class="main-footer">
   			<h2 class="footer-logo">Device</h2>
-  			<ul class="footer-user-navigation">
-  				<li class="footer-user-login"><a href="">Войти</a></li>
-  			</ul>
-  			<ul class="footer-purchase-instruments">
-  				<li class="footer-compare-item"><a href="">Сравнить</a></li>
-  				<li class="footer-shopping-cart"><a href="">Корзина</a></li>
-  			</ul>
+  			<nav class="footer-user-nav">
+  				<ul>
+  					<li class="footer-user-nav-login"><a href="">Войти</a></li>
+  				</ul>
+  			</nav>
+  			<nav>
+  				<ul class="footer-purchase-instruments">
+  					<li class="footer-compare-item"><a href="">Сравнить</a></li>
+  					<li class="footer-shopping-cart"><a href="">Корзина</a></li>
+  				</ul>
+  			</nav>
   			<nav class="footer-navigation">
   				<ul class="footer-site-navigation">
   					<li class="footer-nav-delivery"><a href="">Доставка</a></li>
@@ -236,7 +262,9 @@
   				<p class="small-contact-left">г. Москва, ул. Строителей, 15</p>
   				<p class="small-contact-right">Тел.: +7 (495) 495-95-95</p>
   			</div>
-  			<a class="html-academy-link"></a>
+  			<div class="html-academy-link">
+  				<a href=""></a>
+  			</div>
   		</footer>
 
   		<section class="modal modal-map">
