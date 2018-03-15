@@ -2,9 +2,15 @@
 @font-face {
   font-family: "Gilroy";
   src: url("/fonts/gilroy/gilroyextrabold.woff2") format("woff2"),
-         url("/fonts/gilroy/gilroyextrabold.woff") format("woff"),
-           url("/fonts/gilroy/gilroylight.woff2") format("woff2"),
-             url("/fonts/gilroy/gilroylight.woff") format("woff");
+         url("/fonts/gilroy/gilroyextrabold.woff") format("woff");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/gilroy/gilroylight.woff2") format("woff2"),
+         url("/fonts/gilroy/gilroylight.woff") format("woff");
+  font-weight: 300;
 }
 
 /*  Общие стили для body  */
@@ -77,11 +83,12 @@ a {
   background-color: inherit;
 }
 .main-search-form input:active,
+.main-search-form input:focus,
 .main-search-form input:active::placeholder,
 .main-search-form input:focus::placeholder {
   color: rgba(0, 0, 0, 1);
 }
-
+                                                        /*  TODO для остальных браузеров */
 .main-search-form input:-webkit-autofill {              /*  Меняем стандартный фон для автозаполнения в Chrome */
   -webkit-box-shadow: 0 0 0 30px #f7e296 inset;         /*  на цвет фона header                                */
 }
@@ -165,7 +172,7 @@ a {
 
 
 /*=========================================================================
-  <main>
+  <main> index.html
 =========================================================================*/
 
 /*  Промо-слайдер  */
@@ -214,7 +221,7 @@ a {
   background-color: #f0c52e;
 }
 
-.promo-slider-item-detail-tab:hover {
+.promo-slider-item-detail-tab:hover {             /* TODO */
 
 }
 .promo-slider-item-detail-tab:active {
@@ -247,7 +254,7 @@ a {
   color: rgba(0, 0, 0, 1);
 }
 
-.item-link-list a:hover {
+.item-link-list a:hover {               /* TODO */
 
 }
 .item-link-list a:active {
@@ -273,7 +280,7 @@ a {
   cursor: pointer;
 }
 
-.service-tab:hover {
+.service-tab:hover {                      /* TODO */
 
 }
 .service-tab:active {
@@ -344,7 +351,7 @@ a {
   background-color: #f0c52e;
 }
 
-.about-us-detail-tab:hover {
+.about-us-detail-tab:hover {                  /* TODO */
 
 }
 .about-us-detail-tab:active {
@@ -376,10 +383,229 @@ a {
   background-color: #f0c52e;
 }
 
-.write-us-tab:hover {
+.write-us-tab:hover {                       /* TODO */
 
 }
 .write-us-tab:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+
+
+/*=========================================================================
+  <main> catalog.html
+=========================================================================*/
+
+
+/*  Шапка каталога  */
+.catalog-logo {
+  font-size: 47px;
+  line-height: 48px;
+  color: #000000;
+}
+
+.catalog-nav ul {
+  list-style: none;
+}
+
+.catalog-nav-item,
+.catalog-nav-item a {
+  font-family: "Open sans" "Aerial", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.catalog-nav-item a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+.catalog-nav-item a:active {
+  color: rgba(0, 0, 0, 0);
+}
+
+/*  Сортировка  */
+.sort-parameter-list,
+.sort-direction-control {
+  list-style: none;
+}
+
+.sort-label {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.sort-parameter {
+  font-family: "Open sans" "Aerial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sort-parameter:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+.sort-parameter:active {
+  color: rgba(0, 0, 0, 1);
+}
+.sort-parameter-list li:first-child .sort-parameter {
+  color: rgba(0, 0, 0, 1);
+}
+
+.direction-control:first-child a {
+  background-image: url("img/icon-up-dir.svg");
+  opacity: 0.2;
+}
+.direction-control:last-child a {
+  background-image: url("img/icon-down-dir.svg");
+  opacity: 1;
+}
+
+.direction-control a:hover {
+  opacity: 0.4;
+}
+.direction-control a:active {
+  opacity: 1;
+}
+
+
+/*  Фильтр  */
+.filter-title {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.filter-color-list,
+.filter-bluetooth-options {
+  list-style: none;
+}
+
+.filter-legend {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 900;
+  color: #000000;
+}
+
+.filter-cost p {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.filter-color-item label {
+  font-family: "Open sans" "Aerial", sans-serif;
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: 300;
+  color: #000000;
+}
+
+.filter-color-item label:disabled {
+  color: #a6a6a6;
+}
+
+.filter-bluetooth-options label:disabled {
+  color: #a6a6a6;
+}
+
+/*  Карточки товаров  */
+.catalog-item-img:hover {
+  opacity: 0.7;
+}
+
+.catalog-item > a {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 900;
+  color: #000000;
+}
+
+.catalog-item-price {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  color: #464646;
+}
+
+.item-option-shopping-cart {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 3.6px;
+  color: rgba(0, 0, 0, 1);
+
+  background-color: #f0c52e;
+}
+
+.item-option-shopping-cart:hover {                  /* TODO */
+
+}
+.item-option-shopping-cart:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.item-option-compare {
+  font-family: "Open sans" "Aerial", sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.item-option-compare:hover {
+  color: rgba(0, 0, 0, 1);
+}
+.item-option-compare:active {
+  color: rgba(0, 0, 0, 0);
+}
+
+/*  Пагинация и слайдер каталога  */
+.catalog-item-pagination {
+  list-style: none;
+}
+
+.pagination-item a {
+  font-family: "Gilroy", "Aerial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination-item a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+.pagination-item a:active {
+  color: rgba(0, 0, 0, 1);
+}
+
+.pagination-item-current a {
+  color: rgba(0, 0, 0, 1);
+}
+
+.catalog-item-slider-tab a {
+  font-family: "Gilroy", "Aerial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 900;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 1);
+}
+
+.catalog-item-slider-tab a:hover {
+  background-color: #d9d9d9;
+}
+.catalog-item-slider-tab a:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -484,4 +710,78 @@ a {
 }
 .footer-copyright {
   background-image: url("img/logo-html.svg");
+}
+
+
+
+/*=========================================================================
+  Модальные окна
+=========================================================================*/
+
+.modal-close {
+  font-size: 0;
+  background-image: url("img/modal-close.svg");
+  opacity: 0.5;
+}
+
+.modal-close:hover {
+  opacity: 1;
+}
+.modal-close:active {
+  opacity: 0.3;
+}
+
+
+.write-us-item label {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 900;
+}
+
+.write-us-item input,
+.write-us-item input::placeholder {
+  font-family: "Open sans" "Aerial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: rgba(70, 70, 70, 0.4);
+}
+
+.write-us-item input:active,
+.write-us-item input:active::placeholder,
+.write-us-item input:focus,
+.write-us-item input:focus::placeholder {
+  color: rgba(70, 70, 70, 1);
+}
+
+.write-us-item input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #fff inset;
+}
+
+.write-us-item input:invalid {
+  color: rgba(70, 70, 70, 0.4);
+
+  background-color: #f6dada;
+}
+
+.write-us-button {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3.6px;
+  color: #000000;
+
+  background-color: #f0c52e;
+
+  cursor: pointer;
+}
+
+.write-us-button:hover {      /* TODO */
+
+}
+.write-us-button:active {
+  color: #f7e184;
+
+  background-color: #000000;
 }
