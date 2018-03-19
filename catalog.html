@@ -9,25 +9,29 @@
 	</head>
 
   <body>
-  	<header class="main-header">
+  	<header class="main-header main-container">
   		<h1 class="main-logo"><a href="index.html" aria-label="Ссылка на главную страницу">Device</a></h1>
-  		<form class="main-search-form" action="/">
-  			<label class="visually-hidden" for="search">Поиск по сайту</label>
-  			<input type="search" id="search" name="search" value="" placeholder="Поиск по сайту">
-  			<button type="submit" class="main-search-btn visually-hidden">Найти</button>
-  		</form>
-  		<nav class="main-user-nav">
-  			<ul>
-  				<li class="main-user-nav-login"><a href="https://htmlacademy.ru/profile/id602945"  target="_blank" aria-label="Ссылка на профайл авторизованного пользователя">Валентин Петухов</a></li>
-  				<li class="main-user-nav-logout"><a href="" aria-label="Выйти из аккаунта">Выйти</a></li>
-  			</ul>
-  		</nav>
-  		<nav class="main-purchase-instruments">
-  			<ul>
-  				<li class="main-compare-item"><a href="" aria-label="Сравнить товары">Сравнить</a></li>
-  				<li class="main-shopping-cart"><a href="" aria-label="Корзина с товарами">Корзина</a></li>
-  			</ul>
-  		</nav>
+  		<div class="header-instrument-layout">
+  			<form class="main-search-form" action="/">
+  				<label class="visually-hidden" for="search">Поиск по сайту</label>
+  				<input type="search" id="search" name="search" value="" placeholder="Поиск по сайту">
+  				<button type="submit" class="main-search-btn visually-hidden">Найти</button>
+  			</form>
+  			<div class="main-user-purchase-layout">
+  				<nav class="main-user-nav">
+  					<ul>
+  						<li class="main-user-nav-login"><a href="https://htmlacademy.ru/profile/id602945"  target="_blank" aria-label="Ссылка на профайл авторизованного пользователя">Валентин Петухов</a></li>
+  						<li class="main-user-nav-logout"><a href="" aria-label="Выйти из аккаунта">Выйти</a></li>
+  					</ul>
+  				</nav>
+  				<nav class="main-purchase-instruments">
+  					<ul>
+  						<li class="main-compare-item"><a href="" aria-label="Сравнить товары">Сравнить</a></li>
+  						<li class="main-shopping-cart"><a href="" aria-label="Корзина с товарами">Корзина</a></li>
+  					</ul>
+  				</nav>
+  			</div>
+  		</div>
   		<nav class="main-navigation">
   			<ul class="main-site-nav">
   				<li class="main-nav-item">
@@ -48,7 +52,7 @@
   		</nav>
   	</header>
 
-  	<main class="main-container">
+  	<main class="main-container catalog-container">
   		<section class="catalog-header">
   			<h2 class="catalog-logo">Моноподы для селфи</h2>
   			<nav class="catalog-nav">
@@ -61,24 +65,10 @@
   		</section>
 
   		<section class="catalog-items">
-  			<header class="catalog-items-sort">
-  				<h2 class="visually-hidden">Каталог товаров</h2>
-  				<nav class="catalog-items-sort-nav">
-  					<p class="sort-label">Сортировка:</p>
-  					<ul class="sort-parameter-list">
-  						<li><a class="sort-parameter" href="" aria-label="Сортировка по цене">По цене</a></li>
-  						<li><a class="sort-parameter" href="" aria-label="Сортировка по типу">По типу</a></li>
-  						<li><a class="sort-parameter" href="" aria-label="Сортировка по популярности">По популярности</a></li>
-  					</ul>
-  					<ul class="sort-direction-control">
-  						<li class="direction-control"><a href="" aria-label="Сортировать по возрастанию"></a></li>
-  						<li class="direction-control"><a href="" aria-label="Сортировать по убыванию"></a></li>
-  					</ul>
-  				</nav>
-  			</header>
-
   			<div class="filters">
-  				<h3 class="filter-title">Фильтр:</h3>
+  				<div class="filter-title">
+  					<h3>Фильтр:</h3>
+  				</div>
   				<form class="filter" method="post" action="https://echo.htmlacademy.ru">
 						<fieldset class="filter-cost">
 							<legend class="filter-legend">Стоимость</legend>
@@ -129,104 +119,132 @@
   				</form>
   			</div>
 
-  			<div class="catalog-item-list">
-  				<div class="catalog-item">
-  					<img class="catalog-item-img" src="img/item-1.jpg" width="360" height="380" alt="Изображение любительской селфи-палки">
-  					<a href="catalog-amateur-selfie-bar.html" target="_blank">
-  						<p class="catalog-item-desc">Любительская селфи-палка</p>
-  					</a>
-  					<p class="catalog-item-price">500 руб.</p>
-  					<div class="catalog-item-options">
-  						<a class="item-option-shopping-cart" href="" aria-label="Добавить товер в корзину">В корзину</a>
-  						<a class="item-option-compare" href="" aria-label="Добавить товар к сравнению">Добавить к сравнению</a>
-  					</div>
+				<div class="catalog-items-layout">
+					<div class="catalog-items-sort">
+  					<h2 class="visually-hidden">Каталог товаров</h2>
+  					<nav class="catalog-items-sort-nav">
+  						<div class="sort-list-layout">
+  							<p class="sort-label">Сортировка:</p>
+  							<ul class="sort-parameter-list">
+  								<li><a class="sort-parameter" href="" aria-label="Сортировка по цене">По цене</a></li>
+  								<li><a class="sort-parameter" href="" aria-label="Сортировка по типу">По типу</a></li>
+  								<li><a class="sort-parameter" href="" aria-label="Сортировка по популярности">По популярности</a></li>
+  							</ul>
+  						</div>
+  						<ul class="sort-direction-control">
+  							<li class="direction-control"><a href="" aria-label="Сортировать по возрастанию"></a></li>
+  							<li class="direction-control"><a href="" aria-label="Сортировать по убыванию"></a></li>
+  						</ul>
+  					</nav>
   				</div>
-  				<div class="catalog-item">
-  					<img class="catalog-item-img" src="img/item-2.jpg" width="360" height="380" alt="Изображение профессиональной селфи-палки">
-  					<a href="catalog-prof-selfie-bar.html" target="_blank">
-  						<p class="catalog-item-desc">Профессиональная селфи-палка</p>
-  					</a>
-  					<p class="catalog-item-price">1 500 руб.</p>
-  					<div class="catalog-item-options">
-  						<a class="item-option-shopping-cart" href="" aria-label="Добавить товар в корзину">В корзину</a>
-  						<a class="item-option-compare" href="" aria-label="Добавить товар к сравнению">Добавить к сравнению</a>
-  					</div>
-  				</div>
-  				<div class="catalog-item">
-  					<img class="catalog-item-img" src="img/item-3.jpg" width="360" height="380" alt="Изображение непотопляемой селфи-палки">
-  					<a href="catalog-waterproof-selfie-bar.html" target="_blank">
-  						<p class="catalog-item-desc">Непотопляемая селфи-палка</p>
-  					</a>
-  					<p class="catalog-item-price">2 500 руб.</p>
-  					<div class="catalog-item-options">
-  						<a class="item-option-shopping-cart" href="" aria-label="Добавить товар в корзину">В корзину</a>
-  						<a class="item-option-compare" href="" aria-label="Добавить товар к сравнению">Добавить к сравнению</a>
-  					</div>
-  				</div>
-  				<div class="catalog-item">
-  					<img class="catalog-item-img" src="img/item-4.jpg" width="360" height="380" alt="Изображение селфи-палки 'Следуй за мной'">
-  					<a href="catalog-follow-me-selfy-bar.html" target="_blank"><p class="catalog-item-desc">Селфи-палка "Следуй за мной"</p></a>
-  					<p class="catalog-item-price">4 900 руб.</p>
-  					<div class="catalog-item-options">
-  						<a class="item-option-shopping-cart" href="" aria-label="Добавить товар в корзину">В корзину</a>
-  						<a class="item-option-compare" href="" aria-label="Добавить товар к сравнению">Добавить к сравнению</a>
-  					</div>
-  				</div>
-  			</div>
 
-  			<footer class="catalog-item-slider">
-  				<nav class="catalog-item-slider-nav">
-  					<div class="catalog-item-slider-tab">
-  						<a class="back-tab" href="" aria-label="Предыдущая страница товаров">Назад</a>
+  				<div class="catalog-item-list">
+  					<div class="catalog-item">
+  						<img class="catalog-item-img" src="img/item-1.jpg" width="360" height="380" alt="Изображение любительской селфи-палки">
+  						<a href="catalog-amateur-selfie-bar.html" target="_blank">
+  							<p class="catalog-item-desc">Любительская селфи-палка</p>
+  						</a>
+  						<p class="catalog-item-price">500 руб.</p>
+  						<div class="catalog-item-options">
+  							<a class="item-option-shopping-cart" href="" aria-label="Добавить товер в корзину">В корзину</a>
+  							<a class="item-option-compare" href="" aria-label="Добавить товар к сравнению">Добавить к сравнению</a>
+  						</div>
   					</div>
-  					<div class="catalog-item-slider-tab">
-  						<a class="next-tab" href="" aria-label="Следующая страница товаров">Вперед</a>
+  					<div class="catalog-item">
+  						<img class="catalog-item-img" src="img/item-2.jpg" width="360" height="380" alt="Изображение профессиональной селфи-палки">
+  						<a href="catalog-prof-selfie-bar.html" target="_blank">
+  							<p class="catalog-item-desc">Профессиональная селфи-палка</p>
+  						</a>
+  						<p class="catalog-item-price">1 500 руб.</p>
+  						<div class="catalog-item-options">
+  							<a class="item-option-shopping-cart" href="" aria-label="Добавить товар в корзину">В корзину</a>
+  							<a class="item-option-compare" href="" aria-label="Добавить товар к сравнению">Добавить к сравнению</a>
+  						</div>
   					</div>
-  					<ul class="catalog-item-pagination">
-  						<li class="pagination-item pagination-item-current"><a href="" aria-label="Страница товаров 1">1</a></li>
-  						<li class="pagination-item"><a href="" aria-label="Страница товаров 2">2</a></li>
-  						<li class="pagination-item"><a href="" aria-label="Страница товаров 3">3</a></li>
-  					</ul>
-  				</nav>
-  			</footer>
+  					<div class="catalog-item">
+  						<img class="catalog-item-img" src="img/item-3.jpg" width="360" height="380" alt="Изображение непотопляемой селфи-палки">
+  						<a href="catalog-waterproof-selfie-bar.html" target="_blank">
+  							<p class="catalog-item-desc">Непотопляемая селфи-палка</p>
+  						</a>
+  						<p class="catalog-item-price">2 500 руб.</p>
+  						<div class="catalog-item-options">
+  							<a class="item-option-shopping-cart" href="" aria-label="Добавить товар в корзину">В корзину</a>
+  							<a class="item-option-compare" href="" aria-label="Добавить товар к сравнению">Добавить к сравнению</a>
+  						</div>
+  					</div>
+  					<div class="catalog-item">
+  						<img class="catalog-item-img" src="img/item-4.jpg" width="360" height="380" alt="Изображение селфи-палки 'Следуй за мной'">
+  						<a href="catalog-follow-me-selfy-bar.html" target="_blank"><p class="catalog-item-desc">Селфи-палка "Следуй за мной"</p></a>
+  						<p class="catalog-item-price">4 900 руб.</p>
+  						<div class="catalog-item-options">
+  							<a class="item-option-shopping-cart" href="" aria-label="Добавить товар в корзину">В корзину</a>
+  							<a class="item-option-compare" href="" aria-label="Добавить товар к сравнению">Добавить к сравнению</a>
+  						</div>
+  					</div>
+  				</div>
+
+  				<div class="catalog-item-slider">
+  					<nav class="catalog-item-slider-nav">
+  						<div class="catalog-item-slider-tab">
+  							<a class="back-tab" href="" aria-label="Предыдущая страница товаров">Назад</a>
+  						</div>
+  						<ul class="catalog-item-pagination">
+  							<li class="pagination-item pagination-item-current"><a href="" aria-label="Страница товаров 1">1</a></li>
+  							<li class="pagination-item"><a href="" aria-label="Страница товаров 2">2</a></li>
+  							<li class="pagination-item"><a href="" aria-label="Страница товаров 3">3</a></li>
+  						</ul>
+  						<div class="catalog-item-slider-tab">
+  							<a class="next-tab" href="" aria-label="Следующая страница товаров">Вперед</a>
+  						</div>
+  					</nav>
+  				</div>
+				</div>
+
   		</section>
   	</main>
 
   	<footer class="main-footer">
-  		<h2 class="footer-logo"><a href="index.html" aria-label="Ссылка на главную страницу">Device</a></h2>
-  		<nav class="footer-user-nav">
-  			<ul>
-  				<li class="footer-user-nav-login"><a href="https://htmlacademy.ru/profile/id602945"  target="_blank" aria-label="Ссылка на профайл авторизованного пользователя">Валентин Петухов</a></li>
-  				<li class="footer-user-nav-logout"><a href="" aria-label="Выйти из аккаунта">Выйти</a></li>
-  			</ul>
-  		</nav>
-  		<nav>
-  			<ul class="footer-purchase-instruments">
-  				<li class="footer-compare-item"><a href="" aria-label="Сравнить товары">Сравнить</a></li>
-  				<li class="footer-shopping-cart"><a href="" aria-label="Корзина с товарами">Корзина</a></li>
-  			</ul>
-  		</nav>
-  		<nav class="footer-navigation">
-  			<ul class="footer-site-navigation">
-  				<li class="footer-nav-item"><a href="">Доставка</a></li>
-  				<li class="footer-nav-item"><a href="">Гарантия</a></li>
-  				<li class="footer-nav-item"><a href="">Контакты</a></li>
-  			</ul>
-  		</nav>
-  		<div class="footer-social">
-  			<ul>
-  				<li><a class="social-button" href="" aria-label="Фейсбук">Facebook</a></li>
-  				<li><a class="social-button" href="" aria-label="Инстаграм">Instagram</a></li>
-  				<li><a class="social-button" href="" aria-label="Твиттер">Twitter</a></li>
-  			</ul>
-  		</div>
-  		<div class="small-contacts">
-  			<p class="small-contact-left">г. Москва, ул. Строителей, 15</p>
-  			<p class="small-contact-right">Тел.: +7 (495) 495-95-95</p>
-  		</div>
-  		<div class="footer-copyright">
-  			<a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" aria-label="Создатель: HTML Academy">HTML Academy</a>
-  		</div>
+  		<div class="main-container">
+  			<div class="footer-top-layout">
+ 					<h2 class="footer-logo">Device</h2>
+ 					<div class="footer-user-purchase-layout">
+ 						<nav class="footer-user-nav">
+ 							<ul>
+  						<li class="footer-user-nav-login"><a href="https://htmlacademy.ru/profile/id602945"  target="_blank" aria-label="Ссылка на профайл авторизованного пользователя">Валентин Петухов</a></li>
+  						<li class="footer-user-nav-logout"><a href="" aria-label="Выйти из аккаунта">Выйти</a></li>
+  					</ul>
+ 						</nav>
+ 						<nav>
+ 							<ul class="footer-purchase-instruments">
+ 								<li class="footer-compare-item"><a href="" aria-label="Сравнить товары">Сравнить</a></li>
+ 								<li class="footer-shopping-cart"><a href="" aria-label="Корзина с товарами">Корзина</a></li>
+ 							</ul>
+ 						</nav>
+ 					</div>
+ 				</div>
+				<div class="footer-mid-layout">
+					<p class="small-contacts">г. Москва, ул. Строителей, 15</p>
+ 					<nav class="footer-navigation">
+ 						<ul class="footer-site-navigation">
+ 							<li class="footer-nav-item"><a href="">Доставка</a></li>
+ 							<li class="footer-nav-item"><a href="">Гарантия</a></li>
+ 							<li class="footer-nav-item"><a href="">Контакты</a></li>
+ 						</ul>
+ 					</nav>
+ 					<p class="small-contacts">Тел.: +7 (495) 495-95-95</p>
+ 				</div>
+ 				<div class="footer-bottom-layout">
+ 					<div></div>
+ 					<ul class="footer-social">
+ 						<li><a class="social-button social-facebook" href="" aria-label="Фейсбук">Facebook</a></li>
+ 						<li><a class="social-button social-instagram" href="" aria-label="Инстаграм">Instagram</a></li>
+ 						<li><a class="social-button social-twitter" href="" aria-label="Твиттер">Twitter</a></li>
+ 					</ul>
+ 					<div class="footer-copyright">
+ 						<a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" aria-label="Создатель: HTML Academy">HTML Academy</a>
+ 					</div>
+ 				</div>
+ 			</div>
   	</footer>
   </body>
 
