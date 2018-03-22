@@ -9,13 +9,13 @@
 	</head>
 
   <body>
-  	<header class="main-header main-container">
+  	<header class="main-header main-container catalog-layout">
   		<h1 class="main-logo"><a href="index.html" aria-label="Ссылка на главную страницу">Device</a></h1>
   		<div class="header-instrument-layout">
   			<form class="main-search-form" action="/">
   				<label class="visually-hidden" for="search">Поиск по сайту</label>
-  				<input type="search" id="search" name="search" value="" placeholder="Поиск по сайту">
-  				<button type="submit" class="main-search-btn visually-hidden">Найти</button>
+  				<input class="main-search-input" type="search" id="search" name="search" value="" placeholder="Поиск по сайту">
+  				<button class="main-search-btn" type="submit">Найти</button>
   			</form>
   			<div class="main-user-purchase-layout">
   				<nav class="main-user-nav">
@@ -35,10 +35,10 @@
   		<nav class="main-navigation">
   			<ul class="main-site-nav">
   				<li class="main-nav-item">
-  					<a href="catalog.html">Каталог товаров<span class="main-nav-catalog-burger" aria-label="Подменю каталога товаров"></span></a>
+  					<a href="">Каталог товаров<span class="main-nav-catalog-burger" aria-label="Подменю каталога товаров"></span></a>
   					<ul class="main-nav-catalog-dropdown">
   						<li class="main-nav-catalog-item"><a href="">Виртуальная реальность</a></li>
-  						<li class="main-nav-catalog-item"><a href="">Моноподы для селфи</a></li>
+  						<li class="main-nav-catalog-item"><a href="catalog.html">Моноподы для селфи</a></li>
   						<li class="main-nav-catalog-item"><a href="">Экшн-камеры</a></li>
   						<li class="main-nav-catalog-item"><a href="">Фитнес-браслеты</a></li>
   						<li class="main-nav-catalog-item"><a href="">Умные часы</a></li>
@@ -59,7 +59,7 @@
   				<ul>
   					<li class="catalog-nav-item"><a href="index.html">Главная</a></li>
   					<li class="catalog-nav-item"><a href="catalog.html">Каталог товаров</a></li>
-  					<li class="catalog-nav-item">Моноподы для селфи</li>
+  					<li class="catalog-nav-item"><a href="">Моноподы для селфи</a></li>
   				</ul>
   			</nav>
   		</section>
@@ -81,23 +81,23 @@
 							<legend class="filter-legend">Цвет</legend>
 							<ul class="filter-color-list">
 								<li class="filter-color-item">
-									<label for="color-black" class="visually-hidden">Черный</label>
+									<label for="color-black">Черный</label>
 									<input type="checkbox" id="color-black" name="color" value="" checked>
 								</li>
 								<li class="filter-color-item">
-									<label for="color-white" class="visually-hidden">Белый</label>
+									<label for="color-white">Белый</label>
 									<input type="checkbox" id="color-white" name="color" value="">
 								</li>
 								<li class="filter-color-item">
-									<label for="color-blue" class="visually-hidden">Синий</label>
+									<label for="color-blue">Синий</label>
 									<input type="checkbox" id="color-blue" name="color" value="" checked>
 								</li>
 								<li class="filter-color-item">
-									<label for="color-red" class="visually-hidden">Красный</label>
+									<label for="color-red">Красный</label>
 									<input type="checkbox" id="color-red" name="color" value="" checked>
 								</li>
 								<li class="filter-color-item">
-									<label for="color-pink" class="visually-hidden">Розовый</label>
+									<label for="color-pink">Розовый</label>
 									<input type="checkbox" id="color-pink" name="color" value="">
 								</li>
 							</ul>
@@ -141,10 +141,12 @@
   				<div class="catalog-item-list">
   					<div class="catalog-item">
   						<img class="catalog-item-img" src="img/item-1.jpg" width="360" height="380" alt="Изображение любительской селфи-палки">
-  						<a href="catalog-amateur-selfie-bar.html" target="_blank">
-  							<p class="catalog-item-desc">Любительская селфи-палка</p>
-  						</a>
-  						<p class="catalog-item-price">500 руб.</p>
+              <div class="item-desc-price-layout">
+  						  <a href="catalog-amateur-selfie-bar.html" target="_blank">
+  							 <p class="catalog-item-desc">Любительская селфи-палка</p>
+  						  </a>
+  						  <p class="catalog-item-price">500 руб.</p>
+              </div>
   						<div class="catalog-item-options">
   							<a class="item-option-shopping-cart" href="" aria-label="Добавить товер в корзину">В корзину</a>
   							<a class="item-option-compare" href="" aria-label="Добавить товар к сравнению">Добавить к сравнению</a>
@@ -152,10 +154,13 @@
   					</div>
   					<div class="catalog-item">
   						<img class="catalog-item-img" src="img/item-2.jpg" width="360" height="380" alt="Изображение профессиональной селфи-палки">
-  						<a href="catalog-prof-selfie-bar.html" target="_blank">
-  							<p class="catalog-item-desc">Профессиональная селфи-палка</p>
-  						</a>
-  						<p class="catalog-item-price">1 500 руб.</p>
+              <div class="item-desc-price-layout">
+  						  <a href="catalog-prof-selfie-bar.html" target="_blank">
+  						  	<p class="catalog-item-desc">Профессиональная 
+                                              селфи-палка</p>
+  						  </a>
+  						  <p class="catalog-item-price">1 500 руб.</p>
+              </div>
   						<div class="catalog-item-options">
   							<a class="item-option-shopping-cart" href="" aria-label="Добавить товар в корзину">В корзину</a>
   							<a class="item-option-compare" href="" aria-label="Добавить товар к сравнению">Добавить к сравнению</a>
@@ -163,19 +168,25 @@
   					</div>
   					<div class="catalog-item">
   						<img class="catalog-item-img" src="img/item-3.jpg" width="360" height="380" alt="Изображение непотопляемой селфи-палки">
-  						<a href="catalog-waterproof-selfie-bar.html" target="_blank">
-  							<p class="catalog-item-desc">Непотопляемая селфи-палка</p>
-  						</a>
-  						<p class="catalog-item-price">2 500 руб.</p>
+              <div class="item-desc-price-layout">
+  						  <a href="catalog-waterproof-selfie-bar.html" target="_blank">
+  							 <p class="catalog-item-desc">Непотопляемая селфи-палка</p>
+  						  </a>
+  						  <p class="catalog-item-price">2 500 руб.</p>
+              </div>
   						<div class="catalog-item-options">
   							<a class="item-option-shopping-cart" href="" aria-label="Добавить товар в корзину">В корзину</a>
   							<a class="item-option-compare" href="" aria-label="Добавить товар к сравнению">Добавить к сравнению</a>
   						</div>
   					</div>
-  					<div class="catalog-item">
+  					<div class="catalog-item new">
   						<img class="catalog-item-img" src="img/item-4.jpg" width="360" height="380" alt="Изображение селфи-палки 'Следуй за мной'">
-  						<a href="catalog-follow-me-selfy-bar.html" target="_blank"><p class="catalog-item-desc">Селфи-палка "Следуй за мной"</p></a>
-  						<p class="catalog-item-price">4 900 руб.</p>
+              <div class="item-desc-price-layout">
+  						  <a href="catalog-follow-me-selfy-bar.html" target="_blank">
+                  <p class="catalog-item-desc">Селфи-палка "Следуй за мной"</p>
+                </a>
+  						  <p class="catalog-item-price">4 900 руб.</p>
+              </div>
   						<div class="catalog-item-options">
   							<a class="item-option-shopping-cart" href="" aria-label="Добавить товар в корзину">В корзину</a>
   							<a class="item-option-compare" href="" aria-label="Добавить товар к сравнению">Добавить к сравнению</a>
@@ -234,7 +245,7 @@
  					<p class="small-contacts">Тел.: +7 (495) 495-95-95</p>
  				</div>
  				<div class="footer-bottom-layout">
- 					<div></div>
+ 					<div class="footer-line"></div>
  					<ul class="footer-social">
  						<li><a class="social-button social-facebook" href="" aria-label="Фейсбук">Facebook</a></li>
  						<li><a class="social-button social-instagram" href="" aria-label="Инстаграм">Instagram</a></li>

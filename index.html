@@ -14,8 +14,8 @@
   		<div class="header-instrument-layout">
   			<form class="main-search-form" action="/">
   				<label class="visually-hidden" for="search">Поиск по сайту</label>
-  				<input type="search" id="search" name="search" value="" placeholder="Поиск по сайту">
-  				<button type="submit" class="main-search-btn visually-hidden">Найти</button>
+  				<input class="main-search-input" type="search" id="search" name="search" value="" placeholder="Поиск по сайту">
+  				<button class="main-search-btn" type="submit">Найти</button>
   			</form>
   			<div class="main-user-purchase-layout">
   				<nav class="main-user-nav">
@@ -34,14 +34,14 @@
   		<nav class="main-navigation">
   			<ul class="main-site-nav">
   				<li class="main-nav-item">
-  					<a href="catalog.html">Каталог товаров<span class="main-nav-catalog-burger" aria-label="Подменю каталога товаров"></span></a>
+  					<a href="">Каталог товаров</a>
   					<ul class="main-nav-catalog-dropdown">
-  						<li class="main-nav-catalog-item"><a href="">Виртуальная реальность</a></li>
-  						<li class="main-nav-catalog-item"><a href="">Моноподы для селфи</a></li>
-  						<li class="main-nav-catalog-item"><a href="">Экшн-камеры</a></li>
-  						<li class="main-nav-catalog-item"><a href="">Фитнес-браслеты</a></li>
-  						<li class="main-nav-catalog-item"><a href="">Умные часы</a></li>
-  						<li class="main-nav-catalog-item"><a href="">Квадрокоптеры</a></li>
+  						<li class="main-nav-catalog-item"><a href="catalog-vr.html">Виртуальная реальность</a></li>
+  						<li class="main-nav-catalog-item"><a href="catalog.html">Моноподы для селфи</a></li>
+  						<li class="main-nav-catalog-item"><a href="catalog-action-cam.html">Экшн-камеры</a></li>
+  						<li class="main-nav-catalog-item"><a href="catalog-fintess-tracker.html">Фитнес-браслеты</a></li>
+  						<li class="main-nav-catalog-item"><a href="catalog-smartwatch.html">Умные часы</a></li>
+  						<li class="main-nav-catalog-item"><a href="catalog-quadrocopter.html">Квадрокоптеры</a></li>
   					</ul>
   				</li>
   				<li class="main-nav-item"><a href="">Доставка</a></li>
@@ -70,9 +70,18 @@
 									<a class="promo-slider-item-detail-tab" href=""  aria-label="Подробнее о товаре">Подробнее</a>
 									<nav class="promo-slider-nav">
   									<ul class="promo-slider-control-list">
-  										<li class="active"><label class="visually-hidden">Первый слайд<button class="promo-slider-control"></button></label></li>
-  										<li><label class="visually-hidden">Второй слайд<button class="promo-slider-control"></button></label></li>
-  										<li><label class="visually-hidden">Третий слайд<button class="promo-slider-control"></button></label></li>
+  										<li class="active">
+  											<label for="promo-slide-1-1" class="visually-hidden">Первый слайд</label>
+  											<button id="promo-slide-1-1" class="promo-slider-control"></button>
+  										</li>
+  										<li>
+  											<label for="promo-slide-1-2" class="visually-hidden">Второй слайд</label>
+  											<button id="promo-slide-1-2" class="promo-slider-control"></button>
+  										</li>
+  										<li>
+  											<label for="promo-slide-1-3" class="visually-hidden">Третий слайд</label>
+  											<button id="promo-slide-1-3" class="promo-slider-control"></button>
+  										</li>
   									</ul>
   								</nav>
   							</div>
@@ -106,9 +115,18 @@
 									<a class="promo-slider-item-detail-tab" href="" aria-label="Подробнее о товаре">Подробнее</a>
 									<nav class="promo-slider-nav">
   									<ul class="promo-slider-control-list">
-  										<li><label class="visually-hidden">Первый слайд<button class="promo-slider-control"></button></label></li>
-  										<li class="active"><label class="visually-hidden">Второй слайд<button class="promo-slider-control"></button></label></li>
-  										<li><label class="visually-hidden">Третий слайд<button class="promo-slider-control"></button></label></li>
+  										<li>
+  											<label for="promo-slide-2-1" class="visually-hidden">Первый слайд</label>
+  											<button id="promo-slide-2-1" class="promo-slider-control"></button>
+  										</li>
+  										<li class="active">
+  											<label for="promo-slide-2-2" class="visually-hidden">Второй слайд</label>
+  											<button id="promo-slide-2-2" class="promo-slider-control"></button>
+  										</li>
+  										<li>
+  											<label for="promo-slide-2-3" class="visually-hidden">Третий слайд</label>
+  											<button id="promo-slide-2-3" class="promo-slider-control"></button>
+  										</li>
   									</ul>
   								</nav>
 								</div>
@@ -134,9 +152,18 @@
 									<a class="promo-slider-item-detail-tab" href="" aria-label="Подробнее о товаре">Подробнее</a>
 									<nav class="promo-slider-nav">
   									<ul class="promo-slider-control-list">
-  										<li><label class="visually-hidden">Первый слайд<button class="promo-slider-control"></button></label></li>
-  										<li><label class="visually-hidden">Второй слайд<button class="promo-slider-control"></button></label></li>
-  										<li class="active"><label class="visually-hidden">Третий слайд<button class="promo-slider-control"></button></label></li>
+  										<li>
+  											<label for="promo-slide-3-1" class="visually-hidden">Первый слайд</label>
+  											<button id="promo-slide-3-1" class="promo-slider-control"></button>
+  										</li>
+  										<li>
+  											<label for="promo-slide-3-2" class="visually-hidden">Второй слайд</label>
+  											<button id="promo-slide-3-2" class="promo-slider-control"></button>
+  										</li>
+  										<li class="active">
+  											<label for="promo-slide-3-3" class="visually-hidden">Третий слайд</label>
+  											<button id="promo-slide-3-3" class="promo-slider-control"></button>
+  										</li>
   									</ul>
   								</nav>
 								</div>
@@ -160,39 +187,39 @@
   			<h2 class="visually-hidden">Разделы каталога</h2>
   			<ul class="item-link-list">
   				<li class="item-vr">
-  					<a href="catalog-vr.html" target="_blank">
-  						<div><div class="item-img-vr"></div></div>
+  					<a class="item-link" href="catalog-vr.html" target="_blank">
+  						<div><div class="item-img item-img-vr"></div></div>
   						<p class="item-list-caption">Виртуальная реальность</p>
   					</a>
   				</li>
   				<li class="item-monopod">
-  					<a href="catalog-monopod.html" target="_blank">
-  						<div><div class="item-img-monopod"></div></div>
+  					<a class="item-link" href="catalog.html" target="_blank">
+  						<div><div class="item-img item-img-monopod"></div></div>
   						<p class="item-list-caption">Моноподы 
   						для селфи</p>
   					</a>
   				</li>
   				<li class="item-action-cam">
-  					<a href="catalog-action-cam.html" target="_blank">
-  						<div><div class="item-img-action-cam"></div></div>
+  					<a class="item-link" href="catalog-action-cam.html" target="_blank">
+  						<div><div class="item-img item-img-action-cam"></div></div>
   						<p class="item-list-caption">Экшн-камеры</p>
   					</a>
   				</li>
   				<li class="item-fitness-tracker">
-  					<a href="catalog-fintess-tracker.html" target="_blank">
-  						<div><div class="item-img-fitness-tracker"></div></div>
+  					<a class="item-link" href="catalog-fintess-tracker.html" target="_blank">
+  						<div><div class="item-img item-img-fitness-tracker"></div></div>
   						<p class="item-list-caption">Фитнес-браслеты</p>
   					</a>
   				</li>
   				<li class="item-smartwatch">
-  					<a href="catalog-smartwatch.html" target="_blank">
-  						<div><div class="item-img-smartwatch"></div></div>
+  					<a class="item-link" href="catalog-smartwatch.html" target="_blank">
+  						<div><div class="item-img item-img-smartwatch"></div></div>
   						<p class="item-list-caption">Умные часы</p>
   					</a>
   				</li>
   				<li class="item-quadrocopter">
-  					<a href="catalog-quadrocopter.html" target="_blank">
-  						<div><div class="item-img-quadrocopter"></div></div>
+  					<a class="item-link" href="catalog-quadrocopter.html" target="_blank">
+  						<div><div class="item-img item-img-quadrocopter"></div></div>
   						<p class="item-list-caption">Квадрокоптеры</p>
   					</a>
   				</li>
@@ -205,55 +232,58 @@
   				<div class="service-layout">
   					<nav class="service-list-nav">
   						<ul class="service-list">
-  							<li><button class="service-tab">Доставка</button></li>
+  							<li><button class="service-tab active">Доставка</button></li>
   							<li><button class="service-tab">Гарантия</button></li>
   							<li><button class="service-tab">Кредит</button></li>
   						</ul>
   					</nav>
   					<div class="service-content">
   						<ul class="service-content-list">
-  							<li class="service-delievery">
+  							<li class="service-delivery">
   								<h3 class="service-title">Доставка</h3>
-  								<p class="service-desc">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+  								<p class="service-desc">Мы с удовольствием доставим ваш товар прямо к вашему
+                                          подъезду совершенно бесплатно! Ведь мы неплохо
+                                          заработаем, поднимая его на ваш этаж.</p>
   							</li>
-  							<li class="service-guarantee">
+  							<li class="service-warranty">
   								<h3 class="service-title">Гарантия</h3>
-  								<p class="service-desc">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+  								<p class="service-desc">Если из-за возгорания купленного у нас товара у вас сгорит 
+                                          дом — не переживайте, мы выдадим вам новый. 
+                                          Товар, не дом, конечно же.</p>
   							</li>
-  							<li class="service-credit">
+  							<li class="service-credit active">
   								<h3 class="service-title">Кредит</h3>
-  								<p class="service-desc">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+  								<p class="service-desc">Залезть в долговую яму стало проще! Кредитные
+                                          консультанты подберут для вас наиболее выгодные
+                                          условия кредита. Выгодные для нашего банка, разумеется.</p>
   							</li>
   						</ul>
   					</div>
   				</div>
+  			</div>
   		</section>
 
   		<section class="trademark-logos main-container">
   			<h2 class="visually-hidden">Марки производителей</h2>
   			<ul class="trademark-logos-list">
   				<li class="trademark-logo">
-  					<a class="logo-link" href="" aria-label="продукция DJI">
+  					<a class="logo-link logo-dji" href="" aria-label="продукция DJI">
   						<img class="trademark-logo-img" src="img/logo-1.jpg" width="260" height="100" alt="логотип DJI">
-  						<img class="trademark-hover-img" src="img/logo-1-hover.jpg" width="260" height="100">
   					</a>
   				</li>
   				<li class="trademark-logo">
-  					<a class="logo-link" href="" aria-label="продукция SP Gadgets">
+  					<a class="logo-link logo-sp-gadgets" href="" aria-label="продукция SP Gadgets">
   						<img class="trademark-logo-img" src="img/logo-2.jpg" width="260" height="100" alt="логотип SP Gadgets">
-  						<img class="trademark-hover-img" src="img/logo-2-hover.jpg" width="260" height="100">
   					</a>
   				</li>
   				<li class="trademark-logo">
-  					<a class="logo-link" href="" aria-label="продукция GoPro">
+  					<a class="logo-link logo-gopro" href="" aria-label="продукция GoPro">
   						<img class="trademark-logo-img" src="img/logo-3.jpg" width="260" height="100" alt="логотип GoPro">
-  						<img class="trademark-hover-img" src="img/logo-3-hover.jpg" width="260" height="100">
   					</a>
   				</li>
   				<li class="trademark-logo">
-  					<a class="logo-link" href="" aria-label="продукция VIVE">
+  					<a class="logo-link logo-vive" href="" aria-label="продукция VIVE">
   						<img class="trademark-logo-img" src="img/logo-4.jpg" width="260" height="100" alt="логотип VIVE">
-  						<img class="trademark-hover-img" src="img/logo-4-hover.jpg" width="260" height="100">
   					</a>
   				</li>
   			</ul>
@@ -285,7 +315,7 @@
   					</a>
  					</div>
  					<div>
- 						<a class="write-us-tab" href="write-us.html" target="_blank">Написать нам</a>
+ 						<a class="write-us-tab" href="write-us.html" target="_blank">Напишите нам</a>
  					</div>
  				</section>
 			</div>
@@ -321,7 +351,7 @@
  					<p class="small-contacts">Тел.: +7 (495) 495-95-95</p>
  				</div>
  				<div class="footer-bottom-layout">
- 					<div></div>
+ 					<div class="footer-line"></div>
  					<ul class="footer-social">
  						<li><a class="social-button social-facebook" href="" aria-label="Фейсбук">Facebook</a></li>
  						<li><a class="social-button social-instagram" href="" aria-label="Инстаграм">Instagram</a></li>
