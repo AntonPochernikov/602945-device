@@ -8,8 +8,8 @@
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 
-  <body>
-  	<header class="main-header main-container catalog-layout">
+  <body class="inner-page">
+  	<header class="main-header main-container">
   		<h1 class="main-logo"><a href="index.html" aria-label="Ссылка на главную страницу">Device</a></h1>
   		<div class="header-instrument-layout">
   			<form class="main-search-form" action="/">
@@ -52,53 +52,76 @@
   		</nav>
   	</header>
 
-  	<main class="main-container catalog-container">
-  		<section class="catalog-header">
+  	<main>
+  		<section class="catalog-header main-container catalog-container">
   			<h2 class="catalog-logo">Моноподы для селфи</h2>
   			<nav class="catalog-nav">
   				<ul>
   					<li class="catalog-nav-item"><a href="index.html">Главная</a></li>
   					<li class="catalog-nav-item"><a href="catalog.html">Каталог товаров</a></li>
-  					<li class="catalog-nav-item"><a href="">Моноподы для селфи</a></li>
+  					<li class="catalog-nav-item current"><a>Моноподы для селфи</a></li>
   				</ul>
   			</nav>
   		</section>
 
-  		<section class="catalog-items">
+      <div class="catalog-top-layout">
+        <div class="main-container catalog-container">
+          <h2 class="visually-hidden">Каталог товаров</h2>
+          <nav class="catalog-items-sort-nav">
+            <p class="filter-label">Фильтр:</p>
+            <div class="sort-list-direction-layout">
+              <div class="sort-list-layout">
+                <p class="sort-label">Сортировка:</p>
+                <ul class="sort-parameter-list">
+                  <li><a class="sort-parameter current" href="" aria-label="Сортировка по цене">По цене</a></li>
+                  <li><a class="sort-parameter" href="" aria-label="Сортировка по типу">По типу</a></li>
+                  <li><a class="sort-parameter" href="" aria-label="Сортировка по популярности">По популярности</a></li>
+                </ul>
+              </div>
+              <ul class="sort-direction-control">
+                <li class="direction-control"><a href="" aria-label="Сортировать по возрастанию"></a></li>
+                <li class="direction-control"><a href="" aria-label="Сортировать по убыванию"></a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+  		<section class="catalog-items main-container catalog-container">
   			<div class="filters">
-  				<div class="filter-title">
-  					<h3>Фильтр:</h3>
-  				</div>
+  				<h2 class="visually-hidden">Фильтр:</h2>
   				<form class="filter" method="post" action="https://echo.htmlacademy.ru">
 						<fieldset class="filter-cost">
 							<legend class="filter-legend">Стоимость</legend>
 							<label class="visually-hidden" for="cost">Стоимость</label>
-							<input type="range" id="cost" name="cost" min="0" max="10000" step="100">
-							<p>От 0</p>
-							<p>До 5000</p>
+							<input class="visually-hidden" type="range" id="cost" name="cost" min="0" max="10000" step="100">
+              <div class="cost-value">
+							  <p>от 0</p>
+							  <p>до 5000</p>
+              </div>
 						</fieldset>
 						<fieldset class="filter-color">
 							<legend class="filter-legend">Цвет</legend>
 							<ul class="filter-color-list">
 								<li class="filter-color-item">
-									<label for="color-black">Черный</label>
-									<input type="checkbox" id="color-black" name="color" value="" checked>
+                  <input class="visually-hidden" type="checkbox" id="color-black" name="color" value="" tabindex="-1" checked>
+									<label for="color-black" tabindex="0">Черный</label>
 								</li>
 								<li class="filter-color-item">
-									<label for="color-white">Белый</label>
-									<input type="checkbox" id="color-white" name="color" value="">
+                  <input class="visually-hidden" type="checkbox" id="color-white" name="color" value="" tabindex="-1">
+									<label for="color-white" tabindex="0">Белый</label>
 								</li>
 								<li class="filter-color-item">
-									<label for="color-blue">Синий</label>
-									<input type="checkbox" id="color-blue" name="color" value="" checked>
+                  <input class="visually-hidden" type="checkbox" id="color-blue" name="color" value="" tabindex="-1" checked>
+									<label for="color-blue" tabindex="0">Синий</label>
 								</li>
 								<li class="filter-color-item">
-									<label for="color-red">Красный</label>
-									<input type="checkbox" id="color-red" name="color" value="" checked>
+                  <input class="visually-hidden" type="checkbox" id="color-red" name="color" value="" tabindex="-1" checked>
+									<label for="color-red" tabindex="0">Красный</label>
 								</li>
 								<li class="filter-color-item">
-									<label for="color-pink">Розовый</label>
-									<input type="checkbox" id="color-pink" name="color" value="">
+                  <input class="visually-hidden" type="checkbox" id="color-pink" name="color" value="" tabindex="-1">
+									<label for="color-pink" tabindex="0">Розовый</label>
 								</li>
 							</ul>
 						</fieldset>
@@ -106,12 +129,12 @@
 							<legend class="filter-legend">Bluetooth</legend>
 							<ul class="filter-bluetooth-options">
 								<li>
-									<label for="with-bluetooth">Есть</label>
-									<input type="radio" id="with-bluetooth" name="bluetooth" value="" checked>
+									<input class="visually-hidden" type="radio" id="with-bluetooth" name="bluetooth" value="" checked>
+                  <label for="with-bluetooth" tabindex="0">Есть</label>
 								</li>
 								<li>
-									<label for="without-bluetooth">Нет</label>
-									<input type="radio" id="without-bluetooth" name="bluetooth" value="">
+                  <input class="visually-hidden" type="radio" id="without-bluetooth" name="bluetooth" value="">
+									<label for="without-bluetooth" tabindex="0">Нет</label>
 								</li>
 							</ul>
 						</fieldset>
@@ -120,24 +143,6 @@
   			</div>
 
 				<div class="catalog-items-layout">
-					<div class="catalog-items-sort">
-  					<h2 class="visually-hidden">Каталог товаров</h2>
-  					<nav class="catalog-items-sort-nav">
-  						<div class="sort-list-layout">
-  							<p class="sort-label">Сортировка:</p>
-  							<ul class="sort-parameter-list">
-  								<li><a class="sort-parameter" href="" aria-label="Сортировка по цене">По цене</a></li>
-  								<li><a class="sort-parameter" href="" aria-label="Сортировка по типу">По типу</a></li>
-  								<li><a class="sort-parameter" href="" aria-label="Сортировка по популярности">По популярности</a></li>
-  							</ul>
-  						</div>
-  						<ul class="sort-direction-control">
-  							<li class="direction-control"><a href="" aria-label="Сортировать по возрастанию"></a></li>
-  							<li class="direction-control"><a href="" aria-label="Сортировать по убыванию"></a></li>
-  						</ul>
-  					</nav>
-  				</div>
-
   				<div class="catalog-item-list">
   					<div class="catalog-item">
   						<img class="catalog-item-img" src="img/item-1.jpg" width="360" height="380" alt="Изображение любительской селфи-палки">
@@ -183,7 +188,7 @@
   						<img class="catalog-item-img" src="img/item-4.jpg" width="360" height="380" alt="Изображение селфи-палки 'Следуй за мной'">
               <div class="item-desc-price-layout">
   						  <a href="catalog-follow-me-selfy-bar.html" target="_blank">
-                  <p class="catalog-item-desc">Селфи-палка "Следуй за мной"</p>
+                  <p class="catalog-item-desc">Селфи-палка «Следуй за мной»</p>
                 </a>
   						  <p class="catalog-item-price">4 900 руб.</p>
               </div>
