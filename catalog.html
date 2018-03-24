@@ -12,9 +12,9 @@
   	<header class="main-header main-container">
   		<h1 class="main-logo"><a href="index.html" aria-label="Ссылка на главную страницу">Device</a></h1>
   		<div class="header-instrument-layout">
-  			<form class="main-search-form" action="/">
+  			<form class="main-search-form" method="post" action="https://echo.htmlacademy.ru">
   				<label class="visually-hidden" for="search">Поиск по сайту</label>
-  				<input class="main-search-input" type="search" id="search" name="search" value="" placeholder="Поиск по сайту">
+  				<input class="main-search-input" type="search" id="search" name="search" placeholder="Поиск по сайту">
   				<button class="main-search-btn" type="submit">Найти</button>
   			</form>
   			<div class="main-user-purchase-layout">
@@ -94,7 +94,7 @@
 						<fieldset class="filter-cost">
 							<legend class="filter-legend">Стоимость</legend>
 							<label class="visually-hidden" for="cost">Стоимость</label>
-							<input class="visually-hidden" type="range" id="cost" name="cost" min="0" max="10000" step="100">
+							<input class="visually-hidden" type="range" id="cost" name="cost" value="5000" min="0" max="10000" step="100">
               <div class="cost-value">
 							  <p>от 0</p>
 							  <p>до 5000</p>
@@ -104,24 +104,24 @@
 							<legend class="filter-legend">Цвет</legend>
 							<ul class="filter-color-list">
 								<li class="filter-color-item">
-                  <input class="visually-hidden" type="checkbox" id="color-black" name="color" value="" tabindex="-1" checked>
-									<label for="color-black" tabindex="0">Черный</label>
+                  <input class="visually-hidden" type="checkbox" id="color-black" name="color" value="black" checked>
+									<label for="color-black">Черный</label>
 								</li>
 								<li class="filter-color-item">
-                  <input class="visually-hidden" type="checkbox" id="color-white" name="color" value="" tabindex="-1">
-									<label for="color-white" tabindex="0">Белый</label>
+                  <input class="visually-hidden" type="checkbox" id="color-white" name="color" value="white">
+									<label for="color-white">Белый</label>
 								</li>
 								<li class="filter-color-item">
-                  <input class="visually-hidden" type="checkbox" id="color-blue" name="color" value="" tabindex="-1" checked>
-									<label for="color-blue" tabindex="0">Синий</label>
+                  <input class="visually-hidden" type="checkbox" id="color-blue" name="color" value="blue" checked>
+									<label for="color-blue">Синий</label>
 								</li>
 								<li class="filter-color-item">
-                  <input class="visually-hidden" type="checkbox" id="color-red" name="color" value="" tabindex="-1" checked>
-									<label for="color-red" tabindex="0">Красный</label>
+                  <input class="visually-hidden" type="checkbox" id="color-red" name="color" value="red" checked>
+									<label for="color-red">Красный</label>
 								</li>
 								<li class="filter-color-item">
-                  <input class="visually-hidden" type="checkbox" id="color-pink" name="color" value="" tabindex="-1">
-									<label for="color-pink" tabindex="0">Розовый</label>
+                  <input class="visually-hidden" type="checkbox" id="color-pink" name="color" value="pink">
+									<label for="color-pink">Розовый</label>
 								</li>
 							</ul>
 						</fieldset>
@@ -129,16 +129,16 @@
 							<legend class="filter-legend">Bluetooth</legend>
 							<ul class="filter-bluetooth-options">
 								<li>
-									<input class="visually-hidden" type="radio" id="with-bluetooth" name="bluetooth" value="" checked>
-                  <label for="with-bluetooth" tabindex="0">Есть</label>
+									<input class="visually-hidden" type="radio" id="with-bluetooth" name="bluetooth" value="true" checked>
+                  <label for="with-bluetooth">Есть</label>
 								</li>
 								<li>
-                  <input class="visually-hidden" type="radio" id="without-bluetooth" name="bluetooth" value="">
-									<label for="without-bluetooth" tabindex="0">Нет</label>
+                  <input class="visually-hidden" type="radio" id="without-bluetooth" name="bluetooth" value="false">
+									<label for="without-bluetooth">Нет</label>
 								</li>
 							</ul>
 						</fieldset>
-						<button class="filter-button" type="submit">Показать</button>
+						<button class="button filter-button" type="submit">Показать</button>
   				</form>
   			</div>
 
@@ -153,7 +153,7 @@
   						  <p class="catalog-item-price">500 руб.</p>
               </div>
   						<div class="catalog-item-options">
-  							<a class="item-option-shopping-cart" href="" aria-label="Добавить товер в корзину">В корзину</a>
+  							<a class="button item-option-shopping-cart" href="" aria-label="Добавить товер в корзину">В корзину</a>
   							<a class="item-option-compare" href="" aria-label="Добавить товар к сравнению">Добавить к сравнению</a>
   						</div>
   					</div>
@@ -167,7 +167,7 @@
   						  <p class="catalog-item-price">1 500 руб.</p>
               </div>
   						<div class="catalog-item-options">
-  							<a class="item-option-shopping-cart" href="" aria-label="Добавить товар в корзину">В корзину</a>
+  							<a class="button item-option-shopping-cart" href="" aria-label="Добавить товар в корзину">В корзину</a>
   							<a class="item-option-compare" href="" aria-label="Добавить товар к сравнению">Добавить к сравнению</a>
   						</div>
   					</div>
@@ -180,7 +180,7 @@
   						  <p class="catalog-item-price">2 500 руб.</p>
               </div>
   						<div class="catalog-item-options">
-  							<a class="item-option-shopping-cart" href="" aria-label="Добавить товар в корзину">В корзину</a>
+  							<a class="button item-option-shopping-cart" href="" aria-label="Добавить товар в корзину">В корзину</a>
   							<a class="item-option-compare" href="" aria-label="Добавить товар к сравнению">Добавить к сравнению</a>
   						</div>
   					</div>
@@ -193,7 +193,7 @@
   						  <p class="catalog-item-price">4 900 руб.</p>
               </div>
   						<div class="catalog-item-options">
-  							<a class="item-option-shopping-cart" href="" aria-label="Добавить товар в корзину">В корзину</a>
+  							<a class="button item-option-shopping-cart" href="" aria-label="Добавить товар в корзину">В корзину</a>
   							<a class="item-option-compare" href="" aria-label="Добавить товар к сравнению">Добавить к сравнению</a>
   						</div>
   					</div>

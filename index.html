@@ -12,9 +12,9 @@
   	<header class="main-header main-container">
   		<h1 class="main-logo">Device</h1>
   		<div class="header-instrument-layout">
-  			<form class="main-search-form" action="/">
+  			<form class="main-search-form" method="post" action="https://echo.htmlacademy.ru">
   				<label class="visually-hidden" for="search">Поиск по сайту</label>
-  				<input class="main-search-input" type="search" id="search" name="search" value="" placeholder="Поиск по сайту">
+  				<input class="main-search-input" type="search" id="search" name="search" placeholder="Поиск по сайту">
   				<button class="main-search-btn" type="submit">Найти</button>
   			</form>
   			<div class="main-user-purchase-layout">
@@ -67,7 +67,7 @@
   							<p class="promo-slider-item-desc">Самая длинная палка для селфи доступна в нашем магазине.
 									Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
 								<div class="slider-detail-control-layout">
-									<a class="promo-slider-item-detail-tab" href=""  aria-label="Подробнее о товаре">Подробнее</a>
+									<a class="button promo-slider-item-detail-tab" href=""  aria-label="Подробнее о товаре">Подробнее</a>
 									<nav class="promo-slider-nav">
   									<ul class="promo-slider-control-list">
   										<li class="active">
@@ -112,7 +112,7 @@
   							<p class="promo-slider-item-desc">Мотивирующие фитнес-браслеты помогут найти в себе силы 
 									не пропускать занятия и соблюдать диету.</p>
 								<div class="slider-detail-control-layout">
-									<a class="promo-slider-item-detail-tab" href="" aria-label="Подробнее о товаре">Подробнее</a>
+									<a class="button promo-slider-item-detail-tab" href="" aria-label="Подробнее о товаре">Подробнее</a>
 									<nav class="promo-slider-nav">
   									<ul class="promo-slider-control-list">
   										<li>
@@ -149,7 +149,7 @@
   							<p class="promo-slider-item-desc">Этот обычный, на первый взгляд, квадрокоптер оснащен
   								мощным лазером, замаскированным под стандартную камеру.</p>
   							<div class="slider-detail-control-layout">
-									<a class="promo-slider-item-detail-tab" href="" aria-label="Подробнее о товаре">Подробнее</a>
+									<a class="button promo-slider-item-detail-tab" href="" aria-label="Подробнее о товаре">Подробнее</a>
 									<nav class="promo-slider-nav">
   									<ul class="promo-slider-control-list">
   										<li>
@@ -232,9 +232,9 @@
   				<div class="service-layout">
   					<nav class="service-list-nav">
   						<ul class="service-list">
-  							<li><button class="service-tab active">Доставка</button></li>
-  							<li><button class="service-tab">Гарантия</button></li>
-  							<li><button class="service-tab">Кредит</button></li>
+  							<li><button class="button service-tab active">Доставка</button></li>
+  							<li><button class="button service-tab">Гарантия</button></li>
+  							<li><button class="button service-tab">Кредит</button></li>
   						</ul>
   					</nav>
   					<div class="service-content">
@@ -302,7 +302,7 @@
   					<li>ЖелДорЭкспедиция</li>
   				</ul>
   				<div>
-  					<a class="about-us-detail-tab" href="">Подробнее о нас</a>
+  					<a class="button about-us-detail-tab" href="">Подробнее о нас</a>
   				</div>
   			</section>
 
@@ -315,7 +315,7 @@
   					</a>
  					</div>
  					<div>
- 						<a class="write-us-tab" href="write-us.html" target="_blank">Напишите нам</a>
+ 						<a class="button write-us-tab" href="write-us.html" target="_blank">Напишите нам</a>
  					</div>
  				</section>
 			</div>
@@ -372,22 +372,22 @@
 
   	<section class="modal modal-write-us">
   		<h2 class="visually-hidden">Напишите нам</h2>
-			<form class="write-us-form" action="/">
+			<form class="write-us-form" method="post" action="https://echo.htmlacademy.ru">
 				<div class="write-us-input-layout">
 					<div class="write-us-item">
 						<label for="write-us-name">Ваше имя:</label>
-						<input type="text" id="write-us-name" name="name" value="" placeholder="Имя Фамилия" aria-label="Введите ваше имя">
+						<input type="text" id="write-us-name" name="name" placeholder="Имя Фамилия" aria-label="Введите ваше имя">
 					</div>
 					<div class="write-us-item">
 						<label for="write-us-email">Ваш e-mail:</label>
-						<input type="email" id="write-us-email" name="email" value="" placeholder="email@example.com" aria-label="Введите ваш email">
+						<input type="email" id="write-us-email" name="email" placeholder="email@example.com" aria-label="Введите ваш email">
 					</div>
 					<div class="write-us-item">
 						<label for="write-us-letter">Текст письма:</label>
-						<input type="text" id="write-us-letter" name="letter" value="" placeholder="В свободной форме" aria-label="Введите текст письма">
+						<input type="text" id="write-us-letter" name="letter" placeholder="В свободной форме" aria-label="Введите текст письма">
 					</div>
 				</div>
-				<button class="write-us-button" type="submit">Отправить</button>
+				<button class="button write-us-button" type="submit">Отправить</button>
 			</form>
   		<button class="modal-close" type="button">Закрыть</button>
   	</section>
