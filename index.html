@@ -56,7 +56,7 @@
   			<h2 class="visually-hidden">Промо товаров</h2>
   			<div class="promo-slider-content">
   				<ul class="promo-slider-content-list">
-  					<li class="promo-slider-item-content">
+  					<li class="promo-slider-item-content promo-slide-1 active">
   						<div class="promo-slider-image-container">
   							<img class="promo-slider-item-image" src="img/slider-1.png" width="384" height="486" alt="Изображение селфи-палки">
   						</div>
@@ -70,9 +70,9 @@
 									<a class="button promo-slider-item-detail-tab" href=""  aria-label="Подробнее о товаре">Подробнее</a>
 									<nav class="promo-slider-nav">
   									<ul class="promo-slider-control-list">
-  										<li class="active">
+  										<li>
   											<label for="promo-slide-1-1" class="visually-hidden">Первый слайд</label>
-  											<button id="promo-slide-1-1" class="promo-slider-control"></button>
+  											<button id="promo-slide-1-1" class="promo-slider-control active"></button>
   										</li>
   										<li>
   											<label for="promo-slide-1-2" class="visually-hidden">Второй слайд</label>
@@ -101,7 +101,7 @@
 								</ul>
 							</div>
   					</li>
-  					<li class="promo-slider-item-content">
+  					<li class="promo-slider-item-content promo-slide-2">
   						<div class="promo-slider-image-container">
   							<img class="promo-slider-item-image" src="img/slider-2.png" width="345" height="485" alt="Изображение фитнес-браслета. Надпись: я вижу, что ты снова ешь:(">
   						</div>
@@ -121,7 +121,7 @@
   										</li>
   										<li class="active">
   											<label for="promo-slide-2-2" class="visually-hidden">Второй слайд</label>
-  											<button id="promo-slide-2-2" class="promo-slider-control"></button>
+  											<button id="promo-slide-2-2" class="promo-slider-control active"></button>
   										</li>
   										<li>
   											<label for="promo-slide-2-3" class="visually-hidden">Третий слайд</label>
@@ -138,7 +138,7 @@
 								</ul>
 							</div>
   					</li>
-  					<li class="promo-slider-item-content">
+  					<li class="promo-slider-item-content promo-slide-3">
   						<div class="promo-slider-image-container">
   							<img class="promo-slider-item-image" src="img/slider-3.png" width="526" height="334" alt="Изображение квадрокоптера">
   						</div>
@@ -162,7 +162,7 @@
   										</li>
   										<li class="active">
   											<label for="promo-slide-3-3" class="visually-hidden">Третий слайд</label>
-  											<button id="promo-slide-3-3" class="promo-slider-control"></button>
+  											<button id="promo-slide-3-3" class="promo-slider-control active"></button>
   										</li>
   									</ul>
   								</nav>
@@ -393,96 +393,7 @@
   		<button class="modal-close" type="button">Закрыть</button>
   	</section>
 
-    <script>
-      var linkMap = document.querySelector(".map-thumbnail a");
-      var popupMap = document.querySelector(".modal-map");
-      var closeMap = document.querySelector(".modal-map .modal-close");
-
-      var linkWriteUs = document.querySelector(".write-us-tab");
-      var popupWriteUs = document.querySelector(".modal-write-us");
-      var closeWriteUs = document.querySelector(".modal-write-us .modal-close");
-      var formWriteUs = popupWriteUs.querySelector("form");
-      var nameWriteUs = popupWriteUs.querySelector("input[name=name]");
-      var emailWriteUs = popupWriteUs.querySelector("input[name=email]");
-      var letterWriteUs = popupWriteUs.querySelector("input[name=letter]");
-
-      var deliveryServiceButton = document.querySelector(".delivery-tab");
-      var warrantyServiceButton = document.querySelector(".warranty-tab");
-      var creditServiceButton = document.querySelector(".credit-tab");
-      var deliveryServiceContent = document.querySelector(".service-delivery");
-      var warrantyServiceContent = document.querySelector(".service-warranty");
-      var creditServiceContent = document.querySelector(".service-credit");
-
-// Закрытие попапов клавишей Esc
-      window.addEventListener("keydown", function(evt) {
-        if (evt.keyCode === 27) {
-          evt.preventDefault();
-          popupMap.classList.remove("modal-show");
-          popupWriteUs.classList.remove("modal-show");
-        }
-      });
-
-// Попап карта
-      linkMap.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        popupMap.classList.add("modal-show");
-        closeMap.focus();
-      });
-
-      closeMap.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        popupMap.classList.remove("modal-show");
-      });
-
-// Попап написать нам
-      linkWriteUs.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        popupWriteUs.classList.add("modal-show");
-        nameWriteUs.focus();
-      });
-
-      closeWriteUs.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        popupWriteUs.classList.remove("modal-show");
-      });
-
-      formWriteUs.addEventListener("submit", function(evt) {
-        if (!nameWriteUs.value || !emailWriteUs.value || !letterWriteUs.value) {
-          evt.preventDefault();
-          console.log('Форма не заполнена');
-        }
-      });
-
-// Слайдер услуг
-      deliveryServiceButton.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        deliveryServiceButton.classList.add("active");
-        warrantyServiceButton.classList.remove("active");
-        creditServiceButton.classList.remove("active");
-        deliveryServiceContent.classList.add("active");
-        warrantyServiceContent.classList.remove("active");
-        creditServiceContent.classList.remove("active");
-      });
-
-      warrantyServiceButton.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        deliveryServiceButton.classList.remove("active");
-        warrantyServiceButton.classList.add("active");
-        creditServiceButton.classList.remove("active");
-        deliveryServiceContent.classList.remove("active");
-        warrantyServiceContent.classList.add("active");
-        creditServiceContent.classList.remove("active");
-      });
-
-      creditServiceButton.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        deliveryServiceButton.classList.remove("active");
-        warrantyServiceButton.classList.remove("active");
-        creditServiceButton.classList.add("active");
-        warrantyServiceContent.classList.remove("active");
-        deliveryServiceContent.classList.remove("active");
-        creditServiceContent.classList.add("active");
-      });
+    <script src="js/js.js">
     </script>
 
   </body>
