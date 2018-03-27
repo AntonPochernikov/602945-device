@@ -232,9 +232,9 @@
   				<div class="service-layout">
   					<nav class="service-list-nav">
   						<ul class="service-list">
-  							<li><button class="button service-tab active">Доставка</button></li>
-  							<li><button class="button service-tab">Гарантия</button></li>
-  							<li><button class="button service-tab">Кредит</button></li>
+  							<li><button class="button service-tab delivery-tab active">Доставка</button></li>
+  							<li><button class="button service-tab warranty-tab">Гарантия</button></li>
+  							<li><button class="button service-tab credit-tab">Кредит</button></li>
   						</ul>
   					</nav>
   					<div class="service-content">
@@ -366,7 +366,8 @@
 
   	<section class="modal modal-map">
   		<h2 class="visually-hidden">Как добраться</h2>
-  		<img src="img/map-big.jpg" width="994" height="593" alt="г. Москва, ул. Строителей, 15">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1146360448774!2d37.52784774053438!3d55.68699469261129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1522089863134" width="960" height="550" frameborder="0" style="border:0" allowfullscreen></iframe>
+  		<img class="visually-hidden" src="img/map-big.jpg" width="994" height="593" alt="г. Москва, ул. Строителей, 15">
   		<button class="modal-close" type="button">Закрыть</button>
   	</section>
 
@@ -391,6 +392,99 @@
 			</form>
   		<button class="modal-close" type="button">Закрыть</button>
   	</section>
+
+    <script>
+      var linkMap = document.querySelector(".map-thumbnail a");
+      var popupMap = document.querySelector(".modal-map");
+      var closeMap = document.querySelector(".modal-map .modal-close");
+
+      var linkWriteUs = document.querySelector(".write-us-tab");
+      var popupWriteUs = document.querySelector(".modal-write-us");
+      var closeWriteUs = document.querySelector(".modal-write-us .modal-close");
+      var formWriteUs = popupWriteUs.querySelector("form");
+      var nameWriteUs = popupWriteUs.querySelector("input[name=name]");
+      var emailWriteUs = popupWriteUs.querySelector("input[name=email]");
+      var letterWriteUs = popupWriteUs.querySelector("input[name=letter]");
+
+      var deliveryServiceButton = document.querySelector(".delivery-tab");
+      var warrantyServiceButton = document.querySelector(".warranty-tab");
+      var creditServiceButton = document.querySelector(".credit-tab");
+      var deliveryServiceContent = document.querySelector(".service-delivery");
+      var warrantyServiceContent = document.querySelector(".service-warranty");
+      var creditServiceContent = document.querySelector(".service-credit");
+
+// Закрытие попапов клавишей Esc
+      window.addEventListener("keydown", function(evt) {
+        if (evt.keyCode === 27) {
+          evt.preventDefault();
+          popupMap.classList.remove("modal-show");
+          popupWriteUs.classList.remove("modal-show");
+        }
+      });
+
+// Попап карта
+      linkMap.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        popupMap.classList.add("modal-show");
+        closeMap.focus();
+      });
+
+      closeMap.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        popupMap.classList.remove("modal-show");
+      });
+
+// Попап написать нам
+      linkWriteUs.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        popupWriteUs.classList.add("modal-show");
+        nameWriteUs.focus();
+      });
+
+      closeWriteUs.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        popupWriteUs.classList.remove("modal-show");
+      });
+
+      formWriteUs.addEventListener("submit", function(evt) {
+        if (!nameWriteUs.value || !emailWriteUs.value || !letterWriteUs.value) {
+          evt.preventDefault();
+          console.log('Форма не заполнена');
+        }
+      });
+
+// Слайдер услуг
+      deliveryServiceButton.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        deliveryServiceButton.classList.add("active");
+        warrantyServiceButton.classList.remove("active");
+        creditServiceButton.classList.remove("active");
+        deliveryServiceContent.classList.add("active");
+        warrantyServiceContent.classList.remove("active");
+        creditServiceContent.classList.remove("active");
+      });
+
+      warrantyServiceButton.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        deliveryServiceButton.classList.remove("active");
+        warrantyServiceButton.classList.add("active");
+        creditServiceButton.classList.remove("active");
+        deliveryServiceContent.classList.remove("active");
+        warrantyServiceContent.classList.add("active");
+        creditServiceContent.classList.remove("active");
+      });
+
+      creditServiceButton.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        deliveryServiceButton.classList.remove("active");
+        warrantyServiceButton.classList.remove("active");
+        creditServiceButton.classList.add("active");
+        warrantyServiceContent.classList.remove("active");
+        deliveryServiceContent.classList.remove("active");
+        creditServiceContent.classList.add("active");
+      });
+    </script>
+
   </body>
 
 </html>
