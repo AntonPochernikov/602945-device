@@ -677,7 +677,10 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 
   padding: 0;
   margin: 0;
@@ -1030,6 +1033,9 @@ img {
 }
 
 .delivery-tab {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #fff), color-stop(40%, #f0c52e), color-stop(60%, #f0c52e), color-stop(60%, #e5e5e5));
+  background-image: -webkit-linear-gradient(#fff 40%, #f0c52e 40%, #f0c52e 60%, #e5e5e5 60%);
+  background-image: -o-linear-gradient(#fff 40%, #f0c52e 40%, #f0c52e 60%, #e5e5e5 60%);
   background-image: linear-gradient(#fff 40%, #f0c52e 40%, #f0c52e 60%, #e5e5e5 60%);
 }
 
@@ -1741,25 +1747,50 @@ img {
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes bounce {
+@-webkit-keyframes bounce {
   0% {
-    transform: translate(-50%, -200%); 
+    -webkit-transform: translate(-50%, -200%);
+            transform: translate(-50%, -200%); 
   }
   70% {
-    transform: translate(-50%, -45%);
+    -webkit-transform: translate(-50%, -45%);
+            transform: translate(-50%, -45%);
   }
   90% {
-    transform: translate(-50%, -52%);
+    -webkit-transform: translate(-50%, -52%);
+            transform: translate(-50%, -52%);
   }
   100% {
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translate(-50%, -200%);
+            transform: translate(-50%, -200%); 
+  }
+  70% {
+    -webkit-transform: translate(-50%, -45%);
+            transform: translate(-50%, -45%);
+  }
+  90% {
+    -webkit-transform: translate(-50%, -52%);
+            transform: translate(-50%, -52%);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
 
 .modal.modal-show {
   display: block;
-  animation-name: bounce;
-  animation-duration: 0.6s;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
 }
 
 .modal-map {
@@ -2305,7 +2336,7 @@ img {
   left: 19px;
 }
 
-.filter-cost p {
+.cost-value p {
   position: relative;
   padding: 0;
   margin: 0;
@@ -2317,6 +2348,8 @@ img {
 }
 
 .filter-legend {
+  padding: 0;
+  margin: 0;
   padding-top: 15px;
 
   font-size: 18px;
