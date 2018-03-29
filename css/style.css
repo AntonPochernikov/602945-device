@@ -688,7 +688,6 @@ img {
   list-style: none;
 }
 
-
 .promo-slider-item-content {
   display: none;
 }
@@ -1047,7 +1046,7 @@ img {
           box-shadow: 120px 0 0 0 #000;
 }
 
-.service-tab.active{
+.service-tab.active {
   color: #f7e184;
 
   background-color: #000000;
@@ -1825,9 +1824,6 @@ img {
 }
 
 /*  Написать нам  */
-.modal-write-us {
-
-}
 
 .write-us-input-layout {
   display: -webkit-box;
